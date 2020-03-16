@@ -1,0 +1,15 @@
+clear configure tunnel-group cecId1
+no ip local pool cecId1
+
+clear configure tunnel-group cecId2
+no ip local pool cecId2
+
+clear configure tunnel-group cecId3
+no ip local pool cecId3
+
+clear configure tunnel-group cecId4
+no ip local pool cecId4
+
+clear configure tunnel-group cecId5
+no ip local pool cecId5
+

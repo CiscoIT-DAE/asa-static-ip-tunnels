@@ -1,0 +1,45 @@
+ip local pool cecId1 10.0.0.1 mask 255.255.255.255
+tunnel-group cecId1 type remote-access
+tunnel-group cecId1 general-attributes
+address-pool cecId1
+authentication-server-group AAA_Server
+default-group-policy Default_Group_Policy
+tunnel-group cecId1 webvpn-attributes
+group-url https://vpn-hostname.cisco.com/cecId1 enable
+
+ip local pool cecId2 10.0.0.2 mask 255.255.255.255
+tunnel-group cecId2 type remote-access
+tunnel-group cecId2 general-attributes
+address-pool cecId2
+authentication-server-group AAA_Server
+default-group-policy Default_Group_Policy
+tunnel-group cecId2 webvpn-attributes
+group-url https://vpn-hostname.cisco.com/cecId2 enable
+
+ip local pool cecId3 10.0.0.3 mask 255.255.255.255
+tunnel-group cecId3 type remote-access
+tunnel-group cecId3 general-attributes
+address-pool cecId3
+authentication-server-group AAA_Server
+default-group-policy Default_Group_Policy
+tunnel-group cecId3 webvpn-attributes
+group-url https://vpn-hostname.cisco.com/cecId3 enable
+
+ip local pool cecId4 10.0.0.4 mask 255.255.255.255
+tunnel-group cecId4 type remote-access
+tunnel-group cecId4 general-attributes
+address-pool cecId4
+authentication-server-group AAA_Server
+default-group-policy Default_Group_Policy
+tunnel-group cecId4 webvpn-attributes
+group-url https://vpn-hostname.cisco.com/cecId4 enable
+
+ip local pool cecId5 10.0.0.5 mask 255.255.255.255
+tunnel-group cecId5 type remote-access
+tunnel-group cecId5 general-attributes
+address-pool cecId5
+authentication-server-group AAA_Server
+default-group-policy Default_Group_Policy
+tunnel-group cecId5 webvpn-attributes
+group-url https://vpn-hostname.cisco.com/cecId5 enable
+
