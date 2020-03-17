@@ -71,8 +71,8 @@ def generateStaticTunnelsConfig(users, device, ip_start, aaa_server, group_polic
         # tunnel-group <USER> webvpn-attributes
         config += f"tunnel-group {user} webvpn-attributes\n"
 
-        # group-url https://<DEVICE>.cisco.com/<USER> enable
-        config += f"group-url https://{device}.cisco.com/{user} enable\n"
+        # group-url https://<DEVICE>/<USER> enable
+        config += f"group-url https://{device}/{user} enable\n"
 
         config += "\n"
         ip += 1

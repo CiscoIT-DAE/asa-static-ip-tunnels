@@ -41,7 +41,26 @@ pip install -r requirements.txt
 ```
 python asa_static_ip_tunnels.py
 ```
-The program generates CLI configuration into the `output/` folder.
+
+The following constants are declared in `"__main__"`:
+```
+START_IP = '10.0.0.1'   # first IP address in IP pool, increments by 1 for each user
+DEVICE = 'vpn-device'   # hostname of the VPN headend
+AAA_SERVER = 'AAA_Server'   # name of the AAA server declared on the ASA
+GROUP_POLICY = 'Default_Group_Policy'   # group policy shared by all static tunnels
+```
+
+The program starts by pulling users from `users.txt`:
+```
+cecId1
+cecId2
+cecId3
+cecId4
+cecId5
+```
+User IDs can be separated by ` ` or `\n` characters.
+
+Based off the constants and users, CLI configuration is generated in the `output/` folder.
 ```
 filename: output/config.txt
 
@@ -52,11 +71,13 @@ tunnel-group cecId1 general-attributes
   authentication-server-group AAA_Server
   default-group-policy Default_Group_Policy
 tunnel-group cecId1 webvpn-attributes
-  group-url https://vpn-hostname.cisco.com/cecId1 enable  ! connection URL for user
+  group-url https://vpn-device/cecId1 enable  ! connection URL for user
 
 ...
 ```
+
 A file labeled `clear_config.txt` is also created, which contains ASA CLI configuration to undo the static IP tunnels created.
+
 ## Technologies & Frameworks Used
 
 **Cisco Products & Services:**

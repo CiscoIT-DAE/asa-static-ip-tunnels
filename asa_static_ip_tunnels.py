@@ -29,12 +29,12 @@ __license__ = "Cisco Sample Code License, Version 1.1"
 from static_tunnels import *
 
 if __name__ == "__main__":
-    users = []
     START_IP = '10.0.0.1'
-    DEVICE = 'vpn-hostname'
+    DEVICE = 'vpn-device'
     AAA_SERVER = 'AAA_Server'
-    GROUP_POLICY = "Default_Group_Policy"
+    GROUP_POLICY = 'Default_Group_Policy'
 
+    users = []
     with open('./users.txt') as f:
         users = f.read().split()
 
