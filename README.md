@@ -15,7 +15,7 @@ https://<vpn-device>/a     https://<vpn-device>/b
    tunnel-group a ----------- tunnel-group b ---> shared group-policy
          |                          |          -> shared DAP                                
          v                          v
-    ip pool a  ->  10.0.0.1      ip pool b -> 10.0.0.2
+    ip pool a  ->  10.0.0.1     ip pool b -> 10.0.0.2
          |                          |
          v                          v
      Connected!                 Connected!
