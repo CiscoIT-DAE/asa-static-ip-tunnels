@@ -27,7 +27,7 @@ EVAL(cisco.aaa.username, "EQ", cisco.aaa.tunnelgroup)
 ```
 This is a security necessity to ensure static IPs are taken by the users intended.
 
-The original intent for this program was to satisfy India's VoIP exception for users with static IPs in light of recent events due to COVID-19.
+The original intent for this program was to satisfy India's VoIP exception for users with static IPs due to COVID-19.
 
 ## Installation
 
@@ -116,3 +116,5 @@ A file labeled `clear_config.txt` is also created, which contains ASA CLI config
 
 This project is licensed to you under the terms of the [Cisco Sample
 Code License](./LICENSE).
+
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/asa-static-ip-tunnels)
