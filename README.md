@@ -1,4 +1,4 @@
-# ASA Static IP Tunnels
+# ASA Static IP Tunnels [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/asa-static-ip-tunnels)
 
 *Static IP Tunnel Configuration Generator for ASAs and AnyConnect VPN*
 
@@ -116,5 +116,3 @@ A file labeled `clear_config.txt` is also created, which contains ASA CLI config
 
 This project is licensed to you under the terms of the [Cisco Sample
 Code License](./LICENSE).
-
-[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/asa-static-ip-tunnels)
