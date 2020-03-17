@@ -41,7 +41,22 @@ pip install -r requirements.txt
 ```
 python asa_static_ip_tunnels.py
 ```
+The program generates CLI configuration into the `output/` folder.
+```
+filename: output/config.txt
 
+ip local pool cecId1 10.0.0.1 mask 255.255.255.255   ! address pool with single IP
+tunnel-group cecId1 type remote-access   ! unique tunnel group with same name as user ID
+tunnel-group cecId1 general-attributes
+  address-pool cecId1
+  authentication-server-group AAA_Server
+  default-group-policy Default_Group_Policy
+tunnel-group cecId1 webvpn-attributes
+  group-url https://vpn-hostname.cisco.com/cecId1 enable  ! connection URL for user
+
+...
+```
+A file labeled `clear_config.txt` is also created, which contains ASA CLI configuration to undo the static IP tunnels created.
 ## Technologies & Frameworks Used
 
 **Cisco Products & Services:**
