@@ -66,14 +66,15 @@ python asa_static_ip_tunnels.py
 ```
 
 ## Authors & Maintainers
-
-Smart people responsible for the creation and maintenance of this project:
-
 - Drew Taylor <dretaylo@cisco.com>
 
 ## Credits
 
-Engineers: Damien Stenning (dstennin@cisco.com), Nishant Singh (nishansi@cisco.com), Pete Davis (psd@cisco.com), Fernando De Jesus Sancho Vargas (fsanchov@cisco.com).
+- Damien Stenning <dstennin@cisco.com>
+- Nishant Singh <nishansi@cisco.com>
+- Pete Davis <psd@cisco.com>
+- Fernando De Jesus Sancho Vargas <fsanchov@cisco.com>
+- Tejas Amin <teamin@cisco.com>
 
 ## License
 
