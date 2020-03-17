@@ -4,7 +4,7 @@
 
 This repo contains helper functions designed to generate static IP tunnel configurations for the ASA CLI.
 
-From a high level:
+High level design of static IP tunnels on the ASA in tandem with AnyConnect VPN:
 ```
   VPN Client "a"             VPN Client "b"
          |                          |
@@ -15,7 +15,7 @@ https://<vpn-device>/a     https://<vpn-device>/b
    tunnel-group a ----------- tunnel-group b ---> shared group-policy
          |                          |          -> shared DAP                                
          v                          v
-  ip pool a  ->  10.0.0.1    ip local b -> 10.0.0.2
+    ip pool a  ->  10.0.0.1      ip pool b -> 10.0.0.2
          |                          |
          v                          v
      Connected!                 Connected!
