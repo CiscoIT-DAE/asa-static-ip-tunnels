@@ -5,6 +5,7 @@
 This repo contains helper functions designed to generate static IP tunnel configurations for the ASA CLI.
 
 High level design of static IP tunnels on the ASA in tandem with AnyConnect VPN:
+
 ```
   VPN Client "a"             VPN Client "b"
          |                          |
@@ -22,27 +23,35 @@ https://<vpn-device>/a     https://<vpn-device>/b
 ```
 
 Please take note of the DAP LUA configuration that goes along with this:
+
 ```
 EVAL(cisco.aaa.username, "EQ", cisco.aaa.tunnelgroup)
 ```
+
 This is a security necessity to ensure static IPs are taken by the users intended.
 
 The original intent for this program was to satisfy India's VoIP exception for users with static IPs due to COVID-19.
 
 ## Installation
 
+This code requires Python 3 and has been tested with Python 3.7.7.
+
 ```
+git clone git@github.com:CiscoDevNet/asa-static-ip-tunnels.git
+cd asa-static-ip-tunnels/
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
 
 ## To Run
+
 ```
 python asa_static_ip_tunnels.py
 ```
 
-The following constants are declared in `"__main__"`:
+The following constants are declared in `"__main__"` of [asa_static_ip_tunnels.py](./asa_static_ip_tunnels.py):
+
 ```
 START_IP = '10.0.0.1'   # first IP address in IP pool, increments by 1 for each user
 DEVICE = 'vpn-device'   # hostname of the VPN headend
@@ -50,7 +59,8 @@ AAA_SERVER = 'AAA_Server'   # name of the AAA server declared on the ASA
 GROUP_POLICY = 'Default_Group_Policy'   # group policy shared by all static tunnels
 ```
 
-The program starts by pulling users from `users.txt`:
+The program starts by pulling users from [users.txt](./users.txt):
+
 ```
 cecId1
 cecId2
@@ -60,7 +70,8 @@ cecId5
 ```
 User IDs can be separated by ` ` or `\n` characters.
 
-Based off the constants and users, CLI configuration is generated in the `output/` folder.
+Based off the constants and users, CLI configuration is generated in the [output/](./output/) folder.
+
 ```
 filename: output/config.txt
 
@@ -76,7 +87,9 @@ tunnel-group cecId1 webvpn-attributes
 ...
 ```
 
-A file labeled `clear_config.txt` is also created, which contains ASA CLI configuration to undo the static IP tunnels created.
+A file labeled [clear_config.txt](./output/clear_config.txt) is also created, which contains ASA CLI configuration to undo the static IP tunnels created.
+
+Running [asa_static_ip_tunnels.py](./asa_static_ip_tunnels.py) again overwrites the files in the [output/](./output/) folder.
 
 ## Technologies & Frameworks Used
 
