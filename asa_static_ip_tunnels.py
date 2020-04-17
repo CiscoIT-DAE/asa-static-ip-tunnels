@@ -21,7 +21,7 @@ or implied.
 
 __author__ = "Drew Taylor"
 __email__ = "dretaylo@cisco.com"
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __copyright__ = "Copyright (c) 2020 Cisco and/or its affiliates."
 __license__ = "Cisco Sample Code License, Version 1.1"
 
